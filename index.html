@@ -1,0 +1,135 @@
+<html><head><link rel="stylesheet" type="text/css" media="print" href="print.css"/></head><body><h1>SRS - Software Requirement Specification</h1>
+<ul>
+<li>Defines what the system must do</li>
+<li>Describes functionality of system</li>
+<li>identifies look and feel of system</li>
+</ul>
+<h1>Definitions</h1>
+<ul>
+<li><strong>System:</strong> Set of components acting together to perform a task</li>
+<li><strong>Boundary</strong> Identifies what considered part of system, what considered external; provides location for system in big pic</li>
+<li><strong>Ent/Obj</strong> Entities &amp; Obj are elem in sys that can take state or value</li>
+<li><strong>Activities</strong> actions resulting in change of state or value</li>
+<li><strong>Use Case</strong> Sequence of actions a system perform that yields an observable result of value to a particular actor</li>
+</ul>
+<p><img src="assets/usecase.png" alt="use case"></p>
+<ul>
+<li><strong>Actor</strong> an entity outside system that is involved in interacting with system</li>
+<li><strong>Scenario</strong> A single path through use case</li>
+<li><strong>Use Case Diagram</strong> Graphical representation showing the relationship between a set of use cases and the involved actors. <strong>Purpose</strong> structured approach to show requirements, capture functions and show user interaction for each goal</li>
+<li><strong>Data Flow Diagram</strong> Graphical tool to show flow of data in a system. Used to show where data comes from, where it goes &amp; what transformations happen to it in process.</li>
+</ul>
+<p><img src="assets/dfd-level1.png" alt="level 1 dfd"></p>
+<ul>
+<li><strong>Software Quality</strong> is whether a product meets the specifications, as well as customers requirements <strong>achieved</strong> through testing including code review, unit testing, integration testing &amp; end to end testing</li>
+</ul>
+<h1>System Architecture</h1>
+<ul>
+<li>The Repository Model  (adelaide metro)
+<ul>
+<li>good at managing large data</li>
+<li>subsystems connected to a database</li>
+</ul>
+</li>
+<li>The Client/Server Model
+<ul>
+<li>access video, text, data</li>
+<li>networks/client/server (netflix)</li>
+</ul>
+</li>
+<li>The Abstract Machine Model
+<ul>
+<li>like an onion, deals with high level</li>
+<li>complex systems (spaceship).</li>
+</ul>
+</li>
+</ul>
+<h1>Control Models</h1>
+<ul>
+<li><strong>Centralised Control:</strong> One subsystem has overall responsibility for control, stars / stops other components
+<ul>
+<li><strong>Call and Return Model</strong>
+<ul>
+<li>Top down approach</li>
+<li>passes down permission from main routine</li>
+<li>Sequential systems</li>
+</ul>
+</li>
+<li><strong>Manager Model</strong>
+<ul>
+<li>has a core system controller that reference system state variables.</li>
+<li>Polling sensors</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Event Based Control:</strong> Each subsystem responds to externally generated events
+<ul>
+<li><strong>Interrupt driven handler</strong>
+<ul>
+<li>high performance hard to upgrade -hardware based - limited switches -complex to program and manage</li>
+</ul>
+</li>
+<li><strong>Broadcast model</strong>
+<ul>
+<li>has a single stream of events</li>
+<li>subsystems don't know if events are handled- easy to upgrade</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1>Requirements</h1>
+<ul>
+<li><strong>Functional:</strong> Relates to technical aspects of system  - Create a new user, need username pass, returns id</li>
+<li><strong>Non-Functional:</strong> Can be used to determine the success of system - System must respond to events in 5 seconds under no load</li>
+</ul>
+<h1>Constraints</h1>
+<ul>
+<li><strong>Implementation:</strong> Constraints that must be observed when implementing the system such as no downtime</li>
+<li><strong>Design:</strong> Imposed by others, influence the design - software must run on centos</li>
+</ul>
+<h1>Maintenance</h1>
+<ul>
+<li><strong>Maintenance</strong> is any work done after the system is operational
+<ul>
+<li><strong>Corrective</strong> fix any newly discovered bugs</li>
+<li><strong>Preventative</strong> is to improve the system for future maintainability and reliability</li>
+<li><strong>Adaptive</strong> Changes in the environment of a software system (e.g., hardware or operating system upgrades) will necessitate changes in the system; the software will have to be modified so that it continues to function in the new environment.</li>
+<li><strong>Perfective</strong> As a software system is used, the users suggest new capabilities and other changes to improve the system</li>
+</ul>
+</li>
+<li><strong>Side Effects</strong>
+<ul>
+<li><strong>Documentation</strong> - changes when source code is updated but relevant docs are not</li>
+<li><strong>Coding</strong> - when source code is updated but not all references to a particular function have been checked</li>
+<li><strong>Data</strong> - modify individual elements of data structures / alter the structure in a way that is no longer compatible with the software the system is using</li>
+</ul>
+</li>
+<li><strong>Improve</strong> by improving code quality through code review, ensuring features are well documented</li>
+</ul>
+<h1>Testing</h1>
+<ul>
+<li><strong>Validation</strong> is checking that the requirements define the system that the consumer wants</li>
+<li><strong>Verification</strong> is checking that requirement statements are accurate, complete and unambiguous</li>
+<li><strong>White-box Testing</strong>
+<ul>
+<li>General Purpose  Examines a method of testing software that tests the inner workings of a function</li>
+</ul>
+</li>
+<li><strong>Black-box Testing</strong>
+<ul>
+<li>General Purpose  Examines the functionality of an application without peering into its internals structures or workings.</li>
+</ul>
+</li>
+<li><strong>Stages</strong> Can be broken down into three many stages
+<ul>
+<li><strong>Unit Testing</strong> to test each individual module does what the designer intended</li>
+<li><strong>Integration Testing</strong> to test the interface between each module is as intended</li>
+<li><strong>System Testing</strong> to make sure the system does what the customer intended</li>
+</ul>
+</li>
+</ul>
+<h1>Life Cycle</h1>
+<p><img src="assets/waterfall.png" alt="life cycle model"></p>
+</body></html>
